@@ -63,20 +63,22 @@ def getImage(url, rowpixel, colpixel):
     w, h, pixels, metadata = r.read()
     pxlist = list(pixels)
     return pxlist[rowpixel][colpixel]
+
+#test for provo peak
+lat = 40.2460
+lon = -111.5573
         
 #test for byu
 lat = 40.2455
 lon = -111.6500
-#test for provo peak
+
 import matplotlib.pyplot as plt
-lat = 40.2460
-lon = -111.5573
-beginDate = datetime.date(2012,10,1)
+beginDate = datetime.date(2013,10,1)
 endDate = datetime.date(2014, 6, 30)
 datelist = pd.date_range(beginDate, endDate)
 v = getTimeSeries(lat, lon, beginDate, endDate)  
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.plot(datelist, v)
-ax.fill_between(datelist, 0, v)
+ax.plot(datelist, v, 'ro')
+#ax.fill_between(datelist, 0, v)
 fig
