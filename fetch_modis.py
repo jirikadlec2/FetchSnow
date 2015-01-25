@@ -73,8 +73,8 @@ lat = 40.2455
 lon = -111.6500
 
 import matplotlib.pyplot as plt
-beginDate = datetime.date(2012,10,1)
-endDate = datetime.date(2015, 1, 15)
+beginDate = datetime.date(2014,10,1)
+endDate = datetime.date(2015, 1, 21)
 datelist = pd.date_range(beginDate, endDate)
 v = getTimeSeries(lat1, lon1, beginDate, endDate)
 fig = plt.figure()
